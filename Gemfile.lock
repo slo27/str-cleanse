@@ -74,6 +74,7 @@ GEM
       activesupport
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    digest (3.1.0)
     erubi (1.10.0)
     ffi (1.15.5)
     globalid (1.0.0)
@@ -94,7 +95,15 @@ GEM
     mini_mime (1.1.2)
     minitest (5.16.2)
     msgpack (1.5.3)
+    net-protocol (0.1.3)
+      timeout
+    net-smtp (0.3.1)
+      digest
+      net-protocol
+      timeout
     nio4r (2.5.8)
+    nokogiri (1.13.6-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
     puma (5.6.4)
@@ -145,6 +154,7 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.4.4)
     thor (1.2.1)
+    timeout (0.3.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     websocket-driver (0.7.5)
@@ -153,6 +163,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
@@ -161,6 +172,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   listen (~> 3.3)
+  net-smtp
   puma (~> 5.0)
   rack-cors
   rails (~> 6.1.6)
@@ -169,7 +181,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.7.4p191
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.2.32
